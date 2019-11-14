@@ -1,25 +1,18 @@
-
 /* Programmer: Jeremiah
- * Date: 11.6.19
- * Program: Blank
+ * Date: 11.14.19
+ * Program: digitalRead() & the Serial Port
  * 
- * This program will turn on an LED for a specified amounts of time, turn it
- * off, and back on in a While Loop
+ * Reads a digital input on pin 2, prints the result to the serial monitor 
  */
 
-//initialize our led to Pin 13
-int led = 13;
+
 
 
 void setup() {
-  // Using the Funtion pinMode to call the varible led and provide Output
-  pinMode(led, OUTPUT);
+
+  
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  digitalWrite(led, HIGH);
-  delay(1500);
-  digitalWrite(led, LOW);
-  delay(500);
+  
 }
