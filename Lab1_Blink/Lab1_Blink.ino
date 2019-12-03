@@ -21,21 +21,26 @@ int led = 13;
 int PushButton = 3;
 
 void setup() {
-  // Using the Funtion pinMode to call the varible led and provide Output
-  Serial.begin(9600);
+ // Using the Function pinMode to call the variable led and provide Output
   pinMode(led, OUTPUT);
+
+  //initializes serial communication at 9600 bits per second
+  Serial.begin(9600);
+  //make the pushBotton pin an input
+  pinMode(PushButton, INPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+ // read the input pin
+ int buttonState = digitalRead(PushButton);
+ //print out the state of the button 
+ Serial.println(buttonState);
+ if (buttonState==HIGH){
   digitalWrite(led, HIGH);
   delay(1500);
   digitalWrite(led, LOW);
   delay(500);
+ }
+ delay(1); //delay in between readings for stability
 
-   // read the input pin
- int buttonState = digitalRead(PushButton);
- //print out the state of the button 
- Serial.println(buttonState);
- delay(250); //delay in between readings for stability
 }
